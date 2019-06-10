@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="es" ng-app="myApp">
+<head>
+<meta charset="utf-8">
+<title>The Elder Scrolls Online: Tamriel Unlimited</title>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta name="description" content="The Elder Scrolls Online, Tamriel Unlimited, teso, eso">
+<meta name="keywords" content="The Elder Scrolls Online, Tamriel Unlimited, teso, eso">
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/estilos.css">
+
+<link href='https://fonts.googleapis.com/css?family=Crimson+Text:400italic,400' rel='stylesheet' type='text/css'>
+
+</head>
+<script src="../js/jquery.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/angular.min.js"></script>
+<script src="../js/angular-route.min.js"></script>
+<script src="https://www.youtube.com/iframe_api"></script>
+<script src="../js/angular-youtube-embed.js"></script>
+<script src="../js/teso-app.js"></script>
+<script src="../js/controllers.js"></script>
+
+<body class="font-teso" ng-controller="buildCtrl">
+    <!-- header -->
+    <header>
+        <!-- barra de navegacion -->
+        <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <!-- boton responsive -->
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-teso">
+                        <span class="sr-only">Mostrar/Ocultar</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- brand -->
+                    	<a href="../index.html" class="navbar-brand">IKuroGaming</a>
+                </div>
+                <!-- menu de inicio -->
+                <div class="collapse navbar-collapse pull-right" id="navbar-teso">
+                    <ul class="nav navbar-nav">
+                        <li><a href="teso-index.html">Inicio</a></li>
+                        <li><a href="teso-builds.html">Builds</a></li>
+                        <li><a href="teso-videos.html">Videos</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- slideshow -->
+    <div class="container">
+    	<div class="col-md-12">
+        	<div id="carousel-1" class="carousel slide" data-ride="carousel">
+            	<ol class="carousel-indicators">
+                	<li class="active" data-target="#carousel-1" data-slide-to="0"></li>
+                    <li data-target="#carousel-1" data-slide-to="1"></li>
+                    <li data-target="#carousel-1" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                	<!-- magicka -->
+                	<div class="item active">
+                    	<img src="../img/teso/teso-aldmeri-flag.jpg" class="img-responsive" alt="">
+                        <div class="carousel-caption hidden-xs hidden-sm">
+                        	<h3>The Elders Scrolls Online</h3>
+                            <p>Aldmeri Dominon</p>
+                        </div>
+                    </div>
+                    <!-- stamina -->
+                	<div class="item">
+                    	<img src="../img/teso/teso-daggerfall-flag.jpg" class="img-responsive" alt="">
+                        <div class="carousel-caption hidden-xs hidden-sm">
+                        	<h3>The Elders Scrolls Online</h3>
+                            <p>Daggerfall Covenant</p>
+                        </div>
+                    </div>
+                    <!-- tank -->
+                	<div class="item">
+                    	<img src="../img/teso/teso-ebonheart-flag.jpg" class="img-responsive" alt="">
+                        <div class="carousel-caption hidden-xs hidden-sm">
+                        	<h3>The Elders Scrolls Online</h3>
+                            <p>Ebonheart Pact</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- controles -->
+                <a href="#carousel-1" class="left carousel-control" role="button" data-slide="prev">
+                	<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Anterior</span>
+                </a>
+                <a href="#carousel-1" class="right carousel-control" role="button" data-slide="next">
+                	<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Siguiente</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- main -->
+	<div class="main container teso-background">
+        <!-- mapas -->
+        <div class="row">
+            <h2>Mapa de Alianzas</h2>
+            <section class="col-md-12">
+                <div class="btn-group btn-group-justified box-shadow">
+                    <div class="btn-group">
+                        <button class="btn btn-default" ng-click="getDataMaps($event)" id="btnAD">Aldmeri Dominion</button>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-default" ng-click="getDataMaps($event)" id="btnDC">Daggerfall Covenant</button>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-default" ng-click="getDataMaps($event)" id="btnEP">Ebonheart Pact</button>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-default" ng-click="getDataMaps($event)" id="btnT">Tamriel</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="row">
+            <section class="col-md-12">
+                <div class="btn-group btn-group-justified">
+                    <div class="btn-group space-small" ng-repeat="e in myDataMaps">
+                        <button class="btn btn-default" data-target="#mdMap" data-toggle="modal" ng-click="getMap(e)">
+                            <img ng-src="{{e.url}}" class="img-responsive">
+                            <div class="caption text-center">
+                                <p class="font-small">{{e.title}}</p>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="container-fluid">
+            <div class="modal fade" id="mdMap">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h3 class="modal-title text-center">{{mdTitle}}</h3>
+                            <div class="modal-body">
+                                <img ng-src="{{mdMap}}" class="img-responsive">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- mundus stones -->
+        <div class="row">
+            <h2>Mundus Stones</h2>
+            <section class="col-md-3 col-sm-6">
+                <div class="thumbnail">
+                    <img ng-src="{{myData.stones[0].image}}" class="img-responsive">
+                    <div class="caption text-center">
+                        <a href="#mdImage" data-toggle="modal" ng-click="mdStone($event)" id="stone0">{{myData.stones[0].title}}</a>
+                        <p class="font-small">{{myData.stones[0].description}}</p>
+                    </div>
+                </div>
+            </section>
+            <section class="col-md-3 col-sm-6">
+                <div class="thumbnail">
+                    <img ng-src="{{myData.stones[1].image}}" class="img-responsive">
+                    <div class="caption text-center">
+                        <a href="#mdImage" data-toggle="modal" ng-click="mdStone($event)" id="stone1">{{myData.stones[1].title}}</a>
+                        <p class="font-small">{{myData.stones[1].description}}</p>
+                    </div>
+                </div>
+            </section>
+            <section class="col-md-3 col-sm-6">
+                <div class="thumbnail">
+                    <img ng-src="{{myData.stones[2].image}}" class="img-responsive">
+                    <div class="caption text-center">
+                        <a href="#mdImage" data-toggle="modal" ng-click="mdStone($event)" id="stone2">{{myData.stones[2].title}}</a>
+                        <p class="font-small">{{myData.stones[2].description}}</p>
+                    </div>
+                </div>
+            </section>
+            <section class="col-md-3 col-sm-6">
+                <div class="thumbnail">
+                    <img ng-src="{{myData.stones[3].image}}" class="img-responsive">
+                    <div class="caption text-center">
+                        <a href="#mdImage" data-toggle="modal" ng-click="mdStone($event)" id="stone3">{{myData.stones[3].title}}</a>
+                        <p class="font-small">{{myData.stones[3].description}}</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="row">
+            <section class="col-md-3 col-sm-6">
+                <div class="thumbnail">
+                    <img ng-src="{{myData.stones[4].image}}" class="img-responsive">
+                    <div class="caption text-center">
+                        <a href="#mdImage" data-toggle="modal" ng-click="mdStone($event)" id="stone4">{{myData.stones[4].title}}</a>
+                        <p class="font-small">{{myData.stones[4].description}}</p>
+                    </div>
+                </div>
+            </section>
+            <section class="col-md-3 col-sm-6">
+                <div class="thumbnail">
+                    <img ng-src="{{myData.stones[5].image}}" class="img-responsive">
+                    <div class="caption text-center">
+                        <a href="#mdImage" data-toggle="modal" ng-click="mdStone($event)" id="stone5">{{myData.stones[5].title}}</a>
+                        <p class="font-small">{{myData.stones[5].description}}</p>
+                    </div>
+                </div>
+            </section>
+            <section class="col-md-3 col-sm-6">
+                <div class="thumbnail">
+                    <img ng-src="{{myData.stones[6].image}}" class="img-responsive">
+                    <div class="caption text-center">
+                        <a href="#mdImage" data-toggle="modal" ng-click="mdStone($event)" id="stone6">{{myData.stones[6].title}}</a>
+                        <p class="font-small">{{myData.stones[6].description}}</p>
+                    </div>
+                </div>
+            </section>
+            <section class="col-md-3 col-sm-6">
+                <div class="thumbnail">
+                    <img ng-src="{{myData.stones[7].image}}" class="img-responsive">
+                    <div class="caption text-center">
+                        <a href="#mdImage" data-toggle="modal" ng-click="mdStone($event)" id="stone7">{{myData.stones[7].title}}</a>
+                        <p class="font-small">{{myData.stones[7].description}}</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="row">
+            <section class="col-md-3 col-sm-6">
+                <div class="thumbnail">
+                    <img ng-src="{{myData.stones[8].image}}" class="img-responsive">
+                    <div class="caption text-center">
+                        <a href="#mdImage" data-toggle="modal" ng-click="mdStone($event)" id="stone8">{{myData.stones[8].title}}</a>
+                        <p class="font-small">{{myData.stones[8].description}}</p>
+                    </div>
+                </div>
+            </section>
+            <section class="col-md-3 col-sm-6">
+                <div class="thumbnail">
+                    <img ng-src="{{myData.stones[9].image}}" class="img-responsive">
+                    <div class="caption text-center">
+                        <a href="#mdImage" data-toggle="modal" ng-click="mdStone($event)" id="stone9">{{myData.stones[9].title}}</a>
+                        <p class="font-small">{{myData.stones[9].description}}</p>
+                    </div>
+                </div>
+            </section>
+            <section class="col-md-3 col-sm-6">
+                <div class="thumbnail">
+                    <img ng-src="{{myData.stones[10].image}}" class="img-responsive">
+                    <div class="caption text-center">
+                        <a href="#mdImage" data-toggle="modal" ng-click="mdStone($event)" id="stone10">{{myData.stones[10].title}}</a>
+                        <p class="font-small">{{myData.stones[10].description}}</p>
+                    </div>
+                </div>
+            </section>
+            <section class="col-md-3 col-sm-6">
+                <div class="thumbnail">
+                    <img ng-src="{{myData.stones[11].image}}" class="img-responsive">
+                    <div class="caption text-center">
+                        <a href="#mdImage" data-toggle="modal" ng-click="mdStone($event)" id="stone11">{{myData.stones[11].title}}</a>
+                        <p class="font-small">{{myData.stones[11].description}}</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="container-fluid">
+            <div class="modal fade" id="mdImage">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <div class="modal-body">
+                                <div id="carousel-2" class="carousel slide" data-ride="carousel">
+                                    <ol class="carousel-indicators">
+                                        <li class="active" data-target="#carousel-2" data-slide-to="0"></li>
+                                        <li data-target="#carousel-2" data-slide-to="1"></li>
+                                        <li data-target="#carousel-2" data-slide-to="2"></li>
+                                    </ol>
+                                    <div class="carousel-inner" role="listbox">
+                                        <div class="item active">
+                                            <img ng-src="{{mdMapA}}" class="img-responsive">
+                                            <div class="carousel-caption hidden-xs hidden-sm">
+                                                <h3>Aldmeri Dominion</h3>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <img ng-src="{{mdMapD}}" class="img-responsive">
+                                            <div class="carousel-caption hidden-xs hidden-sm">
+                                                <h3>Daggerfall Covenant</h3>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <img ng-src="{{mdMapE}}" class="img-responsive">
+                                            <div class="carousel-caption hidden-xs hidden-sm">
+                                                <h3>Ebonheart Pact</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- controles -->
+                                    <a href="#carousel-2" class="left carousel-control" role="button" data-slide="prev">
+                                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                        <span class="sr-only">Anterior</span>
+                                    </a>
+                                    <a href="#carousel-2" class="right carousel-control" role="button" data-slide="next">
+                                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                        <span class="sr-only">Siguiente</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- modal -->
+        <div class="container-fluid">
+            <div class="modal fade" id="mdContact">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h3 class="modal-title">Informacion de contacto</h3>
+                            <div class="modal-body">
+                                <h4>Lautaro A. Pianciola</h4>
+                                <h4>Tel: 0249-15-4247-127</h4>
+                                <h4>Email: lautaro.ap@gmail.com</h4>
+                                <a target="_blank" href="https://ar.linkedin.com/in/lautaro-pianciola-4a47bb96" class="btn btn-primary btn-xs font-in">in</a>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- pie de pagina -->
+        <br><br>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <ul class="list-inline text-center">
+                            <li><a href="teso-index.html">Inicio</a></li>
+                            <li><a href="teso-builds.html">Builds</a></li>
+                            <li><a href="teso-videos.html">Videos</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-6">
+                        <ul class="list-inline text-center">
+                            <li><a target="_blank" href="http://www.youtube.com/channel/UC3zLxMC8ZWgYS7gSBSOJQ7A">YouTube</a></li>
+                            <a href="#mdContact" data-toggle="modal">Contacto</a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

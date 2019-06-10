@@ -1,0 +1,192 @@
+<div class="row">
+    <aside class="col-xs-12 col-md-4">
+        <br>
+        <div class="panel-group" id="accordion" role="tablist">
+            <!-- atributos -->
+            <div class="panel panel-default box-shadow">
+                <div class="panel-heading" role="tab" id="heading1">
+                    <h3 class="panel-title">
+                        <span>ATRIBUTOS</span>
+                        <button class="btn btn-default btn-xs pull-right" data-toggle="collapse" data-parent="#accordion" data-target="#collapse1">
+                            <span class="caret"></span>
+                        </button>
+                    </h3>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p><strong>Health:</strong> {{dataBuild.character.health}}</p>
+                        <p><strong>Magicka:</strong> {{dataBuild.character.magicka}}</p>
+                        <p><strong>Stamina:</strong> {{dataBuild.character.stamina}}</p>
+                    </div>
+                </div>
+            </div>
+            <!-- armas -->
+            <div class="panel panel-default box-shadow">
+                <div class="panel-heading" role="tab" id="heading2">
+                    <h3 class="panel-title">
+                        <span>ARMAS</span>
+                        <button class="btn btn-default btn-xs pull-right" data-toggle="collapse" data-parent="#accordion" data-target="#collapse2">
+                            <span class="caret"></span>
+                        </button>
+                    </h3>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p>
+                            <strong>Main Hand:</strong>
+                            <ul>
+                                <li>{{dataBuild.equipment.mainHand}}</li>
+                            </ul>
+                        </p>
+                        <p>
+                            <strong>Off Hand:</strong>
+                            <ul>
+                                <li>{{dataBuild.equipment.offHand}}</li>
+                            </ul>
+                        </p>
+                        <p>
+                            <strong>Main Hand Backup:</strong>
+                            <ul>
+                                <li>{{dataBuild.equipment.mainHandBackup}}</li>
+                            </ul>
+                        </p>
+                        <p>
+                            <strong>Off Hand Backup:</strong>
+                            <ul>
+                                <li>{{dataBuild.equipment.offHandBackup}}</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- equipo -->
+            <div class="panel panel-default box-shadow">
+                <div class="panel-heading" role="tab" id="heading2">
+                    <h3 class="panel-title">
+                        <span>EQUIPO</span>
+                        <button class="btn btn-default btn-xs pull-right" data-toggle="collapse" data-parent="#accordion" data-target="#collapse3">
+                            <span class="caret"></span>
+                        </button>
+                    </h3>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p>
+                            <strong>Head:</strong>
+                            <ul>
+                                <li>{{dataBuild.equipment.head}}</li>
+                            </ul>
+                        </p>
+                        <p>
+                            <strong>Shoulders:</strong>
+                            <ul>
+                                <li>{{dataBuild.equipment.shoulders}}</li>
+                            </ul>
+                        </p>
+                        <p>
+                            <strong>Waist:</strong>
+                            <ul>
+                                <li>{{dataBuild.equipment.waist}}</li>
+                            </ul>
+                        </p>
+                        <p>
+                            <strong>Chest:</strong>
+                            <ul>
+                                <li>{{dataBuild.equipment.chest}}</li>
+                            </ul>
+                        </p>
+                        <p>
+                            <strong>Hands:</strong>
+                            <ul>
+                                <li>{{dataBuild.equipment.hands}}</li>
+                            </ul>
+                        </p>
+                        <p>
+                            <strong>Legs:</strong>
+                            <ul>
+                                <li>{{dataBuild.equipment.legs}}</li>
+                            </ul>
+                        </p>
+                        <p>
+                            <strong>Feet:</strong>
+                            <ul>
+                                <li>{{dataBuild.equipment.feet}}</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- joyeria -->
+            <div class="panel panel-default box-shadow">
+                <div class="panel-heading" role="tab" id="heading2">
+                    <h3 class="panel-title">
+                        <span>JOYERIA</span>
+                        <button class="btn btn-default btn-xs pull-right" data-toggle="collapse" data-parent="#accordion" data-target="#collapse4">
+                            <span class="caret"></span>
+                        </button>
+                    </h3>
+                </div>
+                <div id="collapse4" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p>
+                            <strong>Neck:</strong>
+                            <ul>
+                                <li>{{dataBuild.equipment.neck}}</li>
+                            </ul>
+                        </p>
+                        <p>
+                            <strong>Ring 1:</strong>
+                            <ul>
+                                <li>{{dataBuild.equipment.ring1}}</li>
+                            </ul>
+                        </p>
+                        <p>
+                            <strong>Ring 2:</strong>
+                            <ul>
+                                <li>{{dataBuild.equipment.ring2}}</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- habilidades -->
+            <div class="panel panel-default box-shadow">
+                <div class="panel-heading" role="tab" id="heading3">
+                    <h3 class="panel-title">
+                        <span>HABILIDADES</span>
+                        <button class="btn btn-default btn-xs pull-right" data-toggle="collapse" data-parent="#accordion" data-target="#collapse5">
+                            <span class="caret"></span>
+                        </button>
+                    </h3>
+                </div>
+                <div id="collapse5" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p><strong>Barra de Habilidades 1</strong></p>
+                        <ul>
+                            <li ng-repeat="e in dataBuild.skills.abilityBar1">{{e}}</li>
+                        </ul>
+                        <hr>
+                        <p><strong>Barra de Habilidades 2</strong></p>
+                        <ul>
+                            <li ng-repeat="e in dataBuild.skills.abilityBar2">{{e}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <!-- video -->
+    <div class="col-xs-12 col-md-6" ng-hide="videoHide">
+        <br>
+        <div class="embed-responsive embed-responsive-16by9 box-shadow">
+            <youtube-video video-id="dataBuild.url"></youtube-video>
+        </div>
+        <br>
+        <h3> Comentarios</h3>
+        <div class="panel panel-default box-shadow">
+            <div class="panel-body">
+                
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="es" ng-app="myApp">
+<head>
+<meta charset="utf-8">
+<title>The Elder Scrolls Online: Tamriel Unlimited</title>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/estilos.css">
+
+<link href='https://fonts.googleapis.com/css?family=Crimson+Text:400italic,400' rel='stylesheet' type='text/css'>
+
+</head>
+<script src="../js/jquery.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/angular.min.js"></script>
+<script src="../js/angular-route.min.js"></script>
+<script src="https://www.youtube.com/iframe_api"></script>
+<script src="../js/angular-youtube-embed.js"></script>
+<script src="../js/teso-app.js"></script>
+<script src="../js/controllers.js"></script>
+
+<body class="font-teso" ng-controller="buildCtrl">
+    <!-- header -->
+    <header>
+        <!-- barra de navegacion -->
+        <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <!-- boton responsive -->
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-teso">
+                        <span class="sr-only">Mostrar/Ocultar</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- brand -->
+                    	<a href="../index.html" class="navbar-brand">IKuroGaming</a>
+                </div>
+                <!-- menu de inicio -->
+                <div class="collapse navbar-collapse pull-right" id="navbar-teso">
+                    <ul class="nav navbar-nav">
+                        <li><a href="teso-index.html">Inicio</a></li>
+                        <li><a href="teso-builds.html">Builds</a></li>
+                        <li class="active"><a href="#">Videos</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- jumbotron -->
+    <section class="jumbotron container teso-pvp-background">
+    	<div class="container-fluid">
+            <h2 class="text-aling-center">
+            	The Elder Scrolls Online
+            </h2>
+            <p class="text-aling-center">
+            	"Videos PvP"
+            </p>
+        </div>
+    </section>
+    <!-- main -->
+	<div class="main container teso-background">
+    	<br><br>
+        <!-- barra lateral -->
+        <div class="row">
+            <aside class="col-md-4">
+                <h2>Videos</h2>
+                <div class="panel panel-default box-shadow">
+                    <div class="panel-body">
+                        <div ng-repeat="e in myData.videos">
+                            <h3>{{e.title}}</h3>
+                            <p>{{e.description}}</p>
+                            <button class="btn btn-primary btn-xs pull-right" ng-click="getDataVideo(e)">Mirar &raquo;</button>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <!-- video -->
+            <div class="col-xs-12 col-md-6" ng-hide="videoHide">
+                <br><br>
+                <h3><strong>{{dataVideo.title}}</strong></h3>
+                <div class="embed-responsive embed-responsive-16by9 box-shadow">
+                    <youtube-video video-id="dataVideo.url"></youtube-video>
+                </div>
+            </div>
+        </div>
+        <!-- modal -->
+        <div class="container-fluid">
+            <div class="modal fade" id="mdContact">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h3 class="modal-title">Informacion de contacto</h3>
+                            <div class="modal-body">
+                                <h4>Lautaro A. Pianciola</h4>
+                                <h4>Tel: 0249-15-4247-127</h4>
+                                <h4>Email: lautaro.ap@gmail.com</h4>
+                                <a target="_blank" href="https://ar.linkedin.com/in/lautaro-pianciola-4a47bb96" class="btn btn-primary btn-xs font-in">in</a>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- pie de pagina -->
+        <br><br>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <ul class="list-inline text-center">
+                            <li><a href="teso-index.html">Inicio</a></li>
+                            <li><a href="teso-builds.html">Builds</a></li>
+                            <li><a href="teso-videos.html">Videos</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-6">
+                        <ul class="list-inline text-center">
+                            <li><a target="_blank" href="http://www.youtube.com/channel/UC3zLxMC8ZWgYS7gSBSOJQ7A">YouTube</a></li>
+                            <a href="#mdContact" data-toggle="modal">Contacto</a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

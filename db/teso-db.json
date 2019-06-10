@@ -1,0 +1,363 @@
+{
+	"magicka": [
+
+		{
+			"id":"m01",
+			"build": "Magicka Templar DPS",
+			"url": "O79fMQQCG6Q",
+			"character":
+				{
+					"magicka": 64,
+					"health": 0,
+					"stamina": 0
+				},
+			"equipment":
+				{
+					"mainHand": "Sword of Torug's Pact - Precise",
+					"offHand": "Sword of Torug's Pact - Precise",
+					"mainHandBackup": "Magnus' Restoration Staff - Precise",
+					"offHandBackup": "Magnus' Restoration Staff - Precise",
+					"head": "Hat of Julianos (Light) - Infused",
+					"chest": "Robe of Julianos (Light) - Infused",
+					"shoulders": "Magnus' Pauldron (Heavy) - Divines",
+					"waist": "Sash of Julianos (Light) - Divines",
+					"hands": "Gloves of Julianos (Light) - Divines",
+					"legs": "Breeches of Julianos (Light) - Infused",
+					"feet": "Magnus' Sabatons (Heavy) - Divines",
+					"neck": "Necklace of Willpower - Spell Damage / Arcane",
+					"ring1": "Ring of Willpower - Spell Damage / Arcane",
+					"ring2": "Ring of Willpower - Spell Damage / Arcane"
+				},
+			"skills":
+				{
+					"abilityBar1":
+						{
+							"ability1": "Radiant Oppression",
+							"ability2": "Structured Entropy",
+							"ability3": "Breath of Life",
+							"ability4": "Toppling Charge",
+							"ability5": "Puncturing Sweep",
+							"ultimate": "Clouding Swarm"
+						},
+					"abilityBar2":
+						{
+							"ability1": "Purifyng Ritual",
+							"ability2": "Restoring Focus",
+							"ability3": "Invigorating Drain",
+							"ability4": "Proximity Detonation",
+							"ability5": "Scorching Flare",
+							"ultimate": "Clouding Swarm"
+						}
+				}
+		}
+
+	],
+
+	"stamina": [
+
+		{
+			"id":"s01",
+			"build": "Stamina Nightblade DPS",
+			"url": "WqhJ5CLqisE",
+			"character":
+				{
+					"magicka": 0,
+					"health": 0,
+					"stamina": 64
+				},
+			"equipment":
+				{
+					"mainHand": "Dagger of Ashen Grip - Precise",
+					"offHand": "Dagger of Ashen Grip - Precise",
+					"mainHandBackup": "Bow of Ashen Grip - Precise",
+					"offHandBackup": "Bow of Ashen Grip - Precise",
+					"head": "Hat of Hunding's Rage (Light) - Divines",
+					"chest": "Jack of Ashen Grip (Medium) - Divines",
+					"shoulders": "Molag Kena's Epaulets (Light) - Impenetrable",
+					"waist": "Belt of Hunding's Rage (Medium) - Divines",
+					"hands": "Bracers of Hunding's Rage (Medium) - Divines",
+					"legs": "Guards of Hunding's Rage (Medium) - Divines",
+					"feet": "Boots of Hunding's Rage (Medium) - Divines",
+					"neck": "Necklace of Agility - Weapon Damage / Roboust",
+					"ring1": "Ring of Agility - Weapon Damage / Roboust",
+					"ring2": "Ring of Agility - Weapon Damage / Roboust"
+				},
+			"skills":
+				{
+					"abilityBar1":
+						{
+							"ability1": "Killer's Blade",
+							"ability2": "Resolving Vigor",
+							"ability3": "Surprise Attack",
+							"ability4": "Mass Hysteria",
+							"ability5": "Ambush",
+							"ultimate": "Soul Harvest"
+						},
+					"abilityBar2":
+						{
+							"ability1": "Piercing Mark",
+							"ability2": "Merciless Resolve",
+							"ability3": "Surprise Attack",
+							"ability4": "Shadowy Disguise",
+							"ability5": "Focused Aim",
+							"ultimate": "Soul Harvest"
+						}
+				}
+		}
+	],
+
+	"videos":[
+		{
+			"id": "v01",
+			"title": "Recorriendo Cyrodiil",
+			"description": "Viajando por Cyrodiil con un grupo de nuevos amigos",
+			"url": "FxKJZJwJC7Y"
+		},
+		{
+			"id": "v02",
+			"title": "Campeando en Cyrodiil",
+			"description": "Campenado aldean con Mati y Claudio",
+			"url": "Ox97a_DmpSE"
+		},
+		{
+			"id": "v03",
+			"title": "Nuevos Sets",
+			"description": "Probando los nuevos Sets con Claudio y Mati",
+			"url": "BWbU1ckpdfM"
+		},
+		{
+			"id": "v04",
+			"title": "Recorriendo Bruma",
+			"description": "Recorriendo Bruma y haciendo PvP con Claudio",
+			"url": "O79fMQQCG6Q"
+		}
+	],
+
+	"maps": {
+		"aldmeri": [
+			{
+				"title": "Auridon",
+				"url": "../img/teso/maps/aldmeri/auridon.jpg"
+			},
+			{
+				"title": "Grahtwood",
+				"url": "../img/teso/maps/aldmeri/grahtwood.jpg"
+			},
+			{
+				"title": "Greenshade",
+				"url": "../img/teso/maps/aldmeri/greenshade.jpg"
+			},
+			{
+				"title": "Malabal Tor",
+				"url": "../img/teso/maps/aldmeri/malabal-tor.jpg"
+			},
+			{
+				"title": "Reaper's March",
+				"url": "../img/teso/maps/aldmeri/reaper's-march.jpg"
+			}
+		],
+		"daggerfall": [
+			{
+				"title": "Glenumbra",
+				"url": "../img/teso/maps/daggerfall/glenumbra.jpg"
+			},
+			{
+				"title": "Stros M'kai",
+				"url": "../img/teso/maps/daggerfall/stros-m'kai.jpg"
+			},
+			{
+				"title": "Betnikh",
+				"url": "../img/teso/maps/daggerfall/betnikh.jpg"
+			},
+			{
+				"title": "Stormhaven",
+				"url": "../img/teso/maps/daggerfall/stormhaven.jpg"
+			},
+			{
+				"title": "Rivenspire",
+				"url": "../img/teso/maps/daggerfall/rivenspire.jpg"
+			},
+			{
+				"title": "Alik'r Desert",
+				"url": "../img/teso/maps/daggerfall/alik'r-desert.jpg"
+			},
+			{
+				"title": "Bangkorai",
+				"url": "../img/teso/maps/daggerfall/bangkorai.jpg"
+			}
+		],
+		"ebonheart": [
+			{
+				"title": "stonefalls",
+				"url": "../img/teso/maps/ebonheart/stonefalls.jpg"
+			},
+			{
+				"title": "Bal Foyen",
+				"url": "../img/teso/maps/ebonheart/bal-foyen.jpg"
+			},
+			{
+				"title": "Bleakrock Isle",
+				"url": "../img/teso/maps/ebonheart/bleakrock-isle.jpg"
+			},
+			{
+				"title": "Deshaan",
+				"url": "../img/teso/maps/ebonheart/deshaan.jpg"
+			},
+			{
+				"title": "Shadowfen",
+				"url": "../img/teso/maps/ebonheart/shadowfen.jpg"
+			},
+			{
+				"title": "Eastmarch",
+				"url": "../img/teso/maps/ebonheart/eastmarch.jpg"
+			},
+			{
+				"title": "The Rift",
+				"url": "../img/teso/maps/ebonheart/the-rift.jpg"
+			}
+		],
+		"tamriel": [
+			{
+				"title": "Craglorn",
+				"url": "../img/teso/maps/tamriel/craglorn.jpg"
+			},
+			{
+				"title": "Cyrodiil",
+				"url": "../img/teso/maps/tamriel/cyrodiil.jpg"
+			}
+		]
+	},
+
+	"stones":[
+		{
+			"image": "../img/teso/stones/the-lady.jpg",
+			"title": "The Lady",
+			"description": "Incrementa la resistencia fisica",
+			"map": {
+				"aldmeri": "../img/teso/stones/maps/auridon.jpg",
+				"daggerfall": "../img/teso/stones/maps/glenumbra.jpg",
+				"ebonheart": "../img/teso/stones/maps/stonefalls.jpg"
+			}
+		},
+		{
+			"image": "../img/teso/stones/the-lover.jpg",
+			"title": "The Lover",
+			"description": "Incrementa la resistencia magica",
+			"map": {
+				"aldmeri": "../img/teso/stones/maps/auridon.jpg",
+				"daggerfall": "../img/teso/stones/maps/glenumbra.jpg",
+				"ebonheart": "../img/teso/stones/maps/stonefalls.jpg"
+			}
+		},
+		{
+			"image": "../img/teso/stones/the-lord.jpg",
+			"title": "The Lord",
+			"description": "Incrementa el maximo de salud",
+			"map": {
+				"aldmeri": "../img/teso/stones/maps/grahtwood.jpg",
+				"daggerfall": "../img/teso/stones/maps/stormhaven.jpg",
+				"ebonheart": "../img/teso/stones/maps/deshaan.jpg"
+			}
+		},
+		{
+			"image": "../img/teso/stones/the-mage.jpg",
+			"title": "The Mage",
+			"description": "Incrementa el maximo de magia",
+			"map": {
+				"aldmeri": "../img/teso/stones/maps/grahtwood.jpg",
+				"daggerfall": "../img/teso/stones/maps/stormhaven.jpg",
+				"ebonheart": "../img/teso/stones/maps/deshaan.jpg"
+			}
+		},
+		{
+			"image": "../img/teso/stones/the-tower.jpg",
+			"title": "The Tower",
+			"description": "Incrementa el maximo de stamina",
+			"map": {
+				"aldmeri": "../img/teso/stones/maps/grahtwood.jpg",
+				"daggerfall": "../img/teso/stones/maps/stormhaven.jpg",
+				"ebonheart": "../img/teso/stones/maps/deshaan.jpg"
+			}
+		},
+		{
+			"image": "../img/teso/stones/the-atronach.jpg",
+			"title": "The Atronach",
+			"description": "Incrementa la regeneracion de magia",
+			"map": {
+				"aldmeri": "../img/teso/stones/maps/greenshade.jpg",
+				"daggerfall": "../img/teso/stones/maps/rivenspire.jpg",
+				"ebonheart": "../img/teso/stones/maps/shadowfen.jpg"
+			}
+		},
+		{
+			"image": "../img/teso/stones/the-serpent.jpg",
+			"title": "The Serpent",
+			"description": "Incrementa la regeneracion de stamina",
+			"map": {
+				"aldmeri": "../img/teso/stones/maps/greenshade.jpg",
+				"daggerfall": "../img/teso/stones/maps/rivenspire.jpg",
+				"ebonheart": "../img/teso/stones/maps/shadowfen.jpg"
+			}
+		},
+		{
+			"image": "../img/teso/stones/the-shadow.jpg",
+			"title": "The Shadow",
+			"description": "Incrementa el daño critico de arma",
+			"map": {
+				"aldmeri": "../img/teso/stones/maps/greenshade.jpg",
+				"daggerfall": "../img/teso/stones/maps/rivenspire.jpg",
+				"ebonheart": "../img/teso/stones/maps/shadowfen.jpg"
+			}
+		},
+		{
+			"image": "../img/teso/stones/the-ritual.jpg",
+			"title": "The Ritual",
+			"description": "Incrementa toda la curacion",
+			"map": {
+				"aldmeri": "../img/teso/stones/maps/malabal-tor.jpg",
+				"daggerfall": "../img/teso/stones/maps/alik'r-desert.jpg",
+				"ebonheart": "../img/teso/stones/maps/eastmarch.jpg"
+			}
+		},
+		{
+			"image": "../img/teso/stones/the-thief.jpg",
+			"title": "The Thief",
+			"description": "Incrementa el critico de arma",
+			"map": {
+				"aldmeri": "../img/teso/stones/maps/malabal-tor.jpg",
+				"daggerfall": "../img/teso/stones/maps/alik'r-desert.jpg",
+				"ebonheart": "../img/teso/stones/maps/eastmarch.jpg"
+			}
+		},
+		{
+			"image": "../img/teso/stones/the-warrior.jpg",
+			"title": "The Warrior",
+			"description": "Incrementa el daño de arma",
+			"map": {
+				"aldmeri": "../img/teso/stones/maps/malabal-tor.jpg",
+				"daggerfall": "../img/teso/stones/maps/alik'r-desert.jpg",
+				"ebonheart": "../img/teso/stones/maps/eastmarch.jpg"
+			}
+		},
+		{
+			"image": "../img/teso/stones/the-apprentice.jpg",
+			"title": "The Apprentice",
+			"description": "Incrementa el daño magico",
+			"map": {
+				"aldmeri": "../img/teso/stones/maps/reaper's-march.jpg",
+				"daggerfall": "../img/teso/stones/maps/bangkorai.jpg",
+				"ebonheart": "../img/teso/stones/maps/the-rift.jpg"
+			}
+		},
+		{
+			"image": "../img/teso/stones/the-steed.jpg",
+			"title": "The Steed",
+			"description": "Incrementa la velocidad al correr",
+			"map": {
+				"aldmeri": "../img/teso/stones/maps/reaper's-march.jpg",
+				"daggerfall": "../img/teso/stones/maps/bangkorai.jpg",
+				"ebonheart": "../img/teso/stones/maps/the-rift.jpg"
+			}
+		}
+	]
+}
